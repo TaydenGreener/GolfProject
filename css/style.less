@@ -1,0 +1,144 @@
+@my-Lgreen: lawngreen;
+@my-blue: dodgerblue;
+@my-Dgreen: green;
+@my-black: black;
+
+.body, html{
+  padding-top: 7%;
+  background-image: url("golfbackground.jpg");
+  justify-content: center;
+}
+
+.backBoard{
+  border: 2px solid @my-Lgreen;
+  padding: 10px;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, .4);
+  border-radius: 4px;
+}
+
+.courseDropdown{
+  cursor: pointer;
+}
+
+.teeDropdown{
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  border: 2px solid @my-blue;
+  overflow: scroll;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, .0);
+
+
+
+  .left {
+    padding: 10px;
+    color: @my-Lgreen;
+    //background-color: @my-black;
+
+    .pheader {
+      color: @my-Lgreen;
+      margin-bottom: 63px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+  }
+
+  .right {
+    display: flex;
+
+    .column {
+      border: 1px solid @my-blue;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .cheader {
+        padding-bottom: 5px;
+        color: @my-Dgreen;
+      }
+
+      .yds{
+        color: @my-Lgreen;
+      }
+
+      .par{
+        color: @my-Dgreen;
+      }
+
+      .hcp{
+        color: @my-Lgreen;
+      }
+
+      .holeinput {
+        width: 25px;
+        text-align: center;
+        padding: 5px;
+        font-size: 14px;
+        margin-bottom: 6px;
+      }
+      input[type='number'] {
+        -moz-appearance:textfield;
+      }
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.boxR{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin-top: 23px;
+  //background-color: @my-black;
+}
+
+.scorebox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid @my-blue;
+  color: @my-black;
+  height: 27px;
+  width: 50px;
+  justify-content: center;
+  margin: 3px;
+  overflow: scroll;
+}
+
+.playaFloss{
+  display: flex;
+  padding: 4px;
+  border: 2px solid @my-blue;
+  align-items: center;
+  margin: 8px;
+  border-radius: 2px;
+}
+
+.fa-trash {
+  color: @my-Dgreen;
+  cursor: pointer;
+  margin-left: 4px;
+  padding-right: 4px;
+  font-size: 13px;
+}
+
+.parBox{
+  padding-top: 10px;
+  padding-bottom: 7px;
+  color: @my-Dgreen;
+}

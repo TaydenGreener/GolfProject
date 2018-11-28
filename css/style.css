@@ -1,0 +1,116 @@
+.body,
+html {
+  padding-top: 7%;
+  background-image: url("../images/golfbackground.jpg");
+  justify-content: center;
+}
+.backBoard {
+  border: 2px solid lawngreen;
+  padding: 10px;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+}
+.courseDropdown {
+  cursor: pointer;
+}
+.teeDropdown {
+  cursor: pointer;
+}
+.card {
+  display: flex;
+  border: 2px solid dodgerblue;
+  overflow: scroll;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0);
+}
+.card .left {
+  padding: 10px;
+  color: lawngreen;
+}
+.card .left .pheader {
+  color: lawngreen;
+  margin-bottom: 63px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.card .right {
+  display: flex;
+}
+.card .right .column {
+  border: 1px solid dodgerblue;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card .right .column .cheader {
+  padding-bottom: 5px;
+  color: green;
+}
+.card .right .column .yds {
+  color: lawngreen;
+}
+.card .right .column .par {
+  color: green;
+}
+.card .right .column .hcp {
+  color: lawngreen;
+}
+.card .right .column .holeinput {
+  width: 25px;
+  text-align: center;
+  padding: 5px;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.card .right .column input[type='number'] {
+  -moz-appearance: textfield;
+}
+.card .right .column input::-webkit-outer-spin-button,
+.card .right .column input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.boxR {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin-top: 23px;
+}
+.scorebox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid dodgerblue;
+  color: black;
+  height: 27px;
+  width: 50px;
+  justify-content: center;
+  margin: 3px;
+  overflow: scroll;
+}
+.playaFloss {
+  display: flex;
+  padding: 4px;
+  border: 2px solid dodgerblue;
+  align-items: center;
+  margin: 8px;
+  border-radius: 2px;
+}
+.fa-trash {
+  color: green;
+  cursor: pointer;
+  margin-left: 4px;
+  padding-right: 4px;
+  font-size: 13px;
+}
+.parBox {
+  padding-top: 10px;
+  padding-bottom: 7px;
+  color: green;
+}
