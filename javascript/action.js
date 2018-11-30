@@ -29,6 +29,7 @@ function getCourse(courseid) {
             selcourse = JSON.parse(this.responseText);
             console.log(selcourse);
             let holeonetees = selcourse.data.holes[0].teeBoxes;
+            $(".teeDropdown").html("");
             for (let i = 0; i < holeonetees.length; i++) {
                 $(".teeDropdown").append("<option value='" + i + "'>" + holeonetees[i].teeType + "</option>");
             }
@@ -40,6 +41,7 @@ function getCourse(courseid) {
 
 function setTee(teeindex) {
     $(".right").html("");
+    $(".parBox2").remove();
 
     let mycourse = selcourse.data.holes;
     for (let i = 0; i < mycourse.length; i++) {
@@ -52,12 +54,14 @@ function setTee(teeindex) {
         par += parseInt(mycourse[i].teeBoxes[teeindex].par);
         console.log(par);
     }
-    $(".parBox").append("<div class='parBox'>Total:"+par+"</div>"); //Appends after score totals
+    $(".parBox").append("<div class='parBox2'>Total:"+par+"</div>"); //Appends after score totals
     //$(".boxR").append(par);
    buildCard();
 }
 
 function buildCard() {
+    $(".playaFloss").remove();
+    $(".scorebox").remove();
 
     for (let p = 1; p <= numPlayers; p++) {
         $(".left").append("<div class='playaFloss' id='playa" + p + "'><span onclick='delPlaya(" + p + ")' class='fa fa-trash'></span><span contenteditable='true'>Player" + p + "</span></div>");
