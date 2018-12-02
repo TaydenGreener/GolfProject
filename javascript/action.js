@@ -29,7 +29,7 @@ function getCourse(courseid) {
             selcourse = JSON.parse(this.responseText);
             console.log(selcourse);
             let holeonetees = selcourse.data.holes[0].teeBoxes;
-            $(".teeDropdown").html("");
+            $(".teeDropdown").html("<option value=\"teeselect\" disabled selected>Select A Tee</option>");
             for (let i = 0; i < holeonetees.length; i++) {
                 $(".teeDropdown").append("<option value='" + i + "'>" + holeonetees[i].teeType + "</option>");
             }
@@ -54,9 +54,8 @@ function setTee(teeindex) {
         par += parseInt(mycourse[i].teeBoxes[teeindex].par);
         console.log(par);
     }
-    $(".parBox").append("<div class='parBox2'>Total:"+par+"</div>"); //Appends after score totals
-    //$(".boxR").append(par);
-   buildCard();
+    $(".parBox").append("<div class='parBox2 parTot'>Total:"+par+"</div>"); //Appends after score totals
+    buildCard();
 }
 
 function buildCard() {
